@@ -30,4 +30,8 @@ body, input, textarea, button{
   outline: 0;
 }
 
+body {
+  background-color: ${(props) => props.theme['gray-300']};
+}
+
 `

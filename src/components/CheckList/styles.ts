@@ -2,11 +2,16 @@ import styled from 'styled-components'
 
 export const CheckListContainer = styled.form`
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
 
-  width: 26rem;
+  width: 50rem;
   padding-bottom: 0.2rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+
+    width: 26rem;
+  }
 
   box-shadow: 5px 5px 30px 20px ${(props) => props.theme['gray-500']};
 
@@ -28,20 +33,39 @@ export const CheckListContainer = styled.form`
     }
   }
 
+  @media screen and (max-width: 768px) {
+    &:hover {
+      &:hover {
+        transform: scale(1);
+        border: none;
+
+        img {
+          transform: scale(1.6);
+        }
+      }
+    }
+  }
+
   header {
-    width: inherit;
-    height: 16rem;
+    width: 150rem;
     min-height: 16rem;
 
     border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
 
     overflow: hidden;
 
     img {
       width: 100%;
+      height: 100%;
 
       transition: all 500ms ease-in-out;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: inherit;
+      height: 16rem;
+
+      border-top-right-radius: 12px;
     }
   }
 
@@ -52,19 +76,6 @@ export const CheckListContainer = styled.form`
     gap: 1.4rem;
 
     padding: 1rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    &:hover {
-      &:hover {
-        transform: scale(1);
-        border: none;
-
-        img {
-          transform: scale(1.2);
-        }
-      }
-    }
   }
 `
 
@@ -106,7 +117,13 @@ export const SectionContainer = styled.section`
     }
   }
 `
-export const InputContainer = styled.footer`
+
+interface CheckedButton {
+  checkedButton: boolean
+  checkedFile: boolean
+}
+
+export const InputContainer = styled.footer<CheckedButton>`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -133,16 +150,21 @@ export const InputContainer = styled.footer`
     border-radius: 5px;
 
     font-size: 1.1rem;
-    color: ${(props) => props.theme['blue-700']};
+    color: ${(props) =>
+      props.checkedButton ? props.theme['white-100'] : props.theme['blue-700']};
 
-    background-color: transparent;
+    background-color: ${(props) =>
+      props.checkedButton ? props.theme['blue-700'] : 'transparent'};
 
     transition: all 300ms ease-in-out;
+  }
 
-    &:hover {
-      color: ${(props) => props.theme['white-100']};
-      background-color: ${(props) => props.theme['blue-700']};
-    }
+  label {
+    color: ${(props) =>
+      props.checkedFile ? props.theme['white-100'] : props.theme['blue-700']};
+
+    background-color: ${(props) =>
+      props.checkedFile ? props.theme['blue-700'] : 'transparent'};
   }
 
   input {

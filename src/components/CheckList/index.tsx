@@ -10,16 +10,20 @@ import {
 } from './styles'
 
 export function CheckList() {
-  const [checked, setChecked] = useState(false)
+  const [checkedButton, setCheckedButton] = useState(false)
+  const [checkedFile, setCheckedFile] = useState(false)
   const [nameFile, setNameFile] = useState('')
 
   function handleCheckedButtonClick(event: FormEvent<HTMLButtonElement>) {
     event?.preventDefault()
-    setChecked((checked) => !checked)
+    setCheckedButton((checkedButton) => !checkedButton)
   }
 
   function handleFileName(event: ChangeEvent<HTMLInputElement>) {
-    if (event.target.files) setNameFile(event.target.files[0].name)
+    if (event.target.files) {
+      setCheckedFile((checkedFile) => !checkedFile)
+      setNameFile(event.target.files[0].name)
+    }
   }
 
   return (
@@ -66,9 +70,13 @@ export function CheckList() {
           <h4>
             Verificado/ <strong>Checked</strong>
           </h4>
-          <InputContainer>
+          <InputContainer
+            checkedButton={checkedButton}
+            checkedFile={checkedFile}
+          >
             <button onClick={handleCheckedButtonClick}>
-              {checked ? <ImCheckboxChecked /> : <ImCheckboxUnchecked />} OK
+              {checkedButton ? <ImCheckboxChecked /> : <ImCheckboxUnchecked />}{' '}
+              OK
             </button>
             <div>
               <label htmlFor="image">

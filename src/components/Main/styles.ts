@@ -5,7 +5,12 @@ export const MainContainer = styled.main`
   justify-content: center;
   gap: 2rem;
 
-  padding: 2rem 0;
+  padding: 1rem 0;
 
   background-color: ${(props) => props.theme['gray-300']};
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    padding-top: 1rem;
+  }
 `
