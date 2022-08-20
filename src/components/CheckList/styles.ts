@@ -88,11 +88,13 @@ export const SectionContainer = styled.section`
   p {
     strong {
       color: ${(props) => props.theme['blue-200']};
+      font-style: italic;
     }
   }
 `
 export const InputContainer = styled.footer`
   display: flex;
+  gap: 0.8rem;
 
   button {
     display: flex;
@@ -100,8 +102,7 @@ export const InputContainer = styled.footer`
     align-items: center;
     gap: 0.5rem;
 
-    width: 6rem;
-    padding: 0.2rem 0;
+    padding: 0.2rem 0.5rem;
     margin: 0 auto;
 
     cursor: pointer;

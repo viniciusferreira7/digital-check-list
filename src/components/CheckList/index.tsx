@@ -43,7 +43,7 @@ export default function CheckList() {
         <ArticleContainer>
           <SectionContainer>
             <h4>
-              Visual/ <strong>Visual</strong>
+              Frequência/ <strong>Frequency</strong>
             </h4>
             <strong>100%</strong>
           </SectionContainer>
@@ -64,6 +64,12 @@ export default function CheckList() {
             <button onClick={handleCheckedButtonClick}>
               {checked ? <ImCheckboxChecked /> : <ImCheckboxUnchecked />} OK
             </button>
+            <input
+              type="file"
+              name="file"
+              accept=".png,.jpeg,.jpg"
+              capture="environment"
+            />
           </InputContainer>
         </SectionContainer>
       </main>
