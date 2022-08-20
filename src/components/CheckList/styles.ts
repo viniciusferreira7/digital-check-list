@@ -5,8 +5,8 @@ export const CheckListContainer = styled.form`
   flex-direction: column;
   gap: 2rem;
 
-  width: 30rem;
-  height: 40rem;
+  width: 26rem;
+  padding-bottom: 0.2rem;
 
   box-shadow: 5px 5px 30px 20px ${(props) => props.theme['gray-500']};
 
@@ -53,6 +53,19 @@ export const CheckListContainer = styled.form`
 
     padding: 1rem;
   }
+
+  @media screen and (max-width: 768px) {
+    &:hover {
+      &:hover {
+        transform: scale(1);
+        border: none;
+
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
 `
 
 export const ArticleContainer = styled.article`
@@ -71,6 +84,7 @@ export const SectionContainer = styled.section`
   h4 {
     font-size: 1.3rem;
     color: ${(props) => props.theme['blue-700']};
+    text-align: center;
 
     strong {
       font-style: italic;
@@ -94,9 +108,17 @@ export const SectionContainer = styled.section`
 `
 export const InputContainer = styled.footer`
   display: flex;
-  gap: 0.8rem;
+  flex-direction: column;
+  gap: 0.5rem;
 
-  button {
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  button,
+  label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,5 +143,13 @@ export const InputContainer = styled.footer`
       color: ${(props) => props.theme['white-100']};
       background-color: ${(props) => props.theme['blue-700']};
     }
+  }
+
+  input {
+    display: none;
+  }
+
+  span {
+    color: ${(props) => props.theme['blue-700']};
   }
 `

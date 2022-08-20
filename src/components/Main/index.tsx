@@ -1,8 +1,7 @@
-import React from 'react'
-import CheckList from '../CheckList'
+import { CheckList } from '../CheckList'
 import { MainContainer } from './styles'
 
-export default function Main() {
+export function Main() {
   return (
     <MainContainer>
       <CheckList />

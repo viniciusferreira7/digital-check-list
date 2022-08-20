@@ -1,5 +1,6 @@
-import { FormEvent, useState } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im'
+import { AiFillCamera } from 'react-icons/ai'
 
 import {
   ArticleContainer,
@@ -8,12 +9,17 @@ import {
   SectionContainer,
 } from './styles'
 
-export default function CheckList() {
+export function CheckList() {
   const [checked, setChecked] = useState(false)
+  const [nameFile, setNameFile] = useState('')
 
   function handleCheckedButtonClick(event: FormEvent<HTMLButtonElement>) {
-    event.preventDefault()
+    event?.preventDefault()
     setChecked((checked) => !checked)
+  }
+
+  function handleFileName(event: ChangeEvent<HTMLInputElement>) {
+    if (event.target.files) setNameFile(event.target.files[0].name)
   }
 
   return (
@@ -64,12 +70,19 @@ export default function CheckList() {
             <button onClick={handleCheckedButtonClick}>
               {checked ? <ImCheckboxChecked /> : <ImCheckboxUnchecked />} OK
             </button>
-            <input
-              type="file"
-              name="file"
-              accept=".png,.jpeg,.jpg"
-              capture="environment"
-            />
+            <div>
+              <label htmlFor="image">
+                <AiFillCamera size={22} />
+              </label>
+              <input
+                type="file"
+                id="image"
+                accept=".png,.jpeg,.jpg"
+                capture="user"
+                onChange={handleFileName}
+              />
+              {nameFile ? <span>{nameFile}</span> : null}
+            </div>
           </InputContainer>
         </SectionContainer>
       </main>

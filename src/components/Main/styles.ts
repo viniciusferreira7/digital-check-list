@@ -5,7 +5,7 @@ export const MainContainer = styled.main`
   justify-content: center;
   gap: 2rem;
 
-  padding-top: 2rem;
+  padding: 2rem 0;
 
   background-color: ${(props) => props.theme['gray-300']};
 `
