@@ -6,7 +6,7 @@ export const CheckListContainer = styled.form`
   gap: 2rem;
 
   width: 30rem;
-  height: 35rem;
+  height: 40rem;
 
   box-shadow: 5px 5px 30px 20px ${(props) => props.theme['gray-500']};
 
@@ -30,7 +30,8 @@ export const CheckListContainer = styled.form`
 
   header {
     width: inherit;
-    height: 13rem;
+    height: 16rem;
+    min-height: 16rem;
 
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -48,16 +49,76 @@ export const CheckListContainer = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 1.4rem;
 
     padding: 1rem;
+  }
+`
 
-    h4 {
-      color: ${(props) => props.theme['blue-700']};
+export const ArticleContainer = styled.article`
+  display: flex;
+  justify-content: space-around;
 
-      strong {
-        font-style: italic;
-        color: ${(props) => props.theme['blue-200']};
-      }
+  text-align: center;
+`
+export const SectionContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  margin: 0 auto;
+
+  h4 {
+    font-size: 1.3rem;
+    color: ${(props) => props.theme['blue-700']};
+
+    strong {
+      font-style: italic;
+      color: ${(props) => props.theme['blue-200']};
+    }
+  }
+
+  & > div {
+    width: inherit;
+    height: 6rem;
+
+    overflow: auto;
+  }
+
+  p {
+    strong {
+      color: ${(props) => props.theme['blue-200']};
+    }
+  }
+`
+export const InputContainer = styled.footer`
+  display: flex;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: 6rem;
+    padding: 0.2rem 0;
+    margin: 0 auto;
+
+    cursor: pointer;
+
+    border: 2px solid ${(props) => props.theme['blue-700']};
+    border-radius: 5px;
+
+    font-size: 1.1rem;
+    color: ${(props) => props.theme['blue-700']};
+
+    background-color: transparent;
+
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      color: ${(props) => props.theme['white-100']};
+      background-color: ${(props) => props.theme['blue-700']};
     }
   }
 `

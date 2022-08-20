@@ -8,9 +8,26 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 
-body, input, textarea{
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: ${(props) => props.theme['blue-700']};
+  border-radius: 5px;
+
+}
+
+::-webkit-scrollbar-track{
+  background-color: ${(props) => props.theme['white-200']};
+  border-radius: 5px;
+
+}
+
+body, input, textarea, button{
   font-family: 'Exo 2', sans-serif;
   font-weight:400;
+  outline: 0;
 }
 
 `

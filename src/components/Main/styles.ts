@@ -8,5 +8,4 @@ export const MainContainer = styled.main`
   padding-top: 2rem;
 
   background-color: ${(props) => props.theme['gray-300']};
-  height: 100vh;
 `
