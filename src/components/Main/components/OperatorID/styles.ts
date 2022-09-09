@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SerialNumbersGearboxesMotorsContainer = styled.div`
+export const OperatorIDContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,8 +8,6 @@ export const SerialNumbersGearboxesMotorsContainer = styled.div`
   gap: 1.5rem;
 
   width: 50rem;
-
-  padding: 1rem 1rem 0 1rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -28,24 +26,4 @@ export const SerialNumbersGearboxesMotorsContainer = styled.div`
   overflow: hidden;
 
   cursor: pointer;
-
-  table {
-    border-collapse: collapse;
-
-    strong {
-      font-style: italic;
-      color: ${(props) => props.theme['blue-200']};
-    }
-
-    th,
-    tr {
-      text-align: center;
-    }
-
-    th,
-    td {
-      border: 1px solid ${(props) => props.theme['blue-700']};
-      padding: 0.3rem;
-    }
-  }
 `

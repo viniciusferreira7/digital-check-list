@@ -8,7 +8,6 @@ export const ProductionOrderContainer = styled.div`
   gap: 1.5rem;
 
   width: 50rem;
-  padding-bottom: 0.2rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -27,26 +26,4 @@ export const ProductionOrderContainer = styled.div`
   overflow: hidden;
 
   cursor: pointer;
-
-  &:hover {
-    transform: scale(1.08);
-    border: 2px solid ${(props) => props.theme['blue-700']};
-
-    img {
-      transform: scale(1.2);
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    &:hover {
-      &:hover {
-        transform: scale(1);
-        border: none;
-
-        img {
-          transform: scale(1.6);
-        }
-      }
-    }
-  }
 `
