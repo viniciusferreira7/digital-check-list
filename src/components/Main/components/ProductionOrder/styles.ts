@@ -26,4 +26,9 @@ export const ProductionOrderContainer = styled.div`
   overflow: hidden;
 
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.08);
+    border: 2px solid ${(props) => props.theme['blue-700']};
+  }
 `

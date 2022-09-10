@@ -29,6 +29,11 @@ export const SerialNumbersGearboxesMotorsContainer = styled.div`
 
   cursor: pointer;
 
+  &:hover {
+    transform: scale(1.08);
+    border: 2px solid ${(props) => props.theme['blue-700']};
+  }
+
   table {
     border-collapse: collapse;
 
@@ -40,6 +45,10 @@ export const SerialNumbersGearboxesMotorsContainer = styled.div`
     th,
     tr {
       text-align: center;
+    }
+
+    th {
+      font-size: 0.8rem;
     }
 
     th,
