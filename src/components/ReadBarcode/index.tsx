@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { CheckListContext } from '../../contexts/CheckListContext'
 import { useDisclosure, Collapse } from '@chakra-ui/react'
 
 import {
@@ -7,6 +9,8 @@ import {
 } from './styles'
 
 export function ReadBarcode() {
+  const { currentCheckList, handleFindCheckList } = useContext(CheckListContext)
+
   const { isOpen, onToggle } = useDisclosure()
 
   return (
@@ -17,7 +21,8 @@ export function ReadBarcode() {
       </Collapse>
 
       <Collapse in={isOpen} animateOpacity>
-        <p>Valor</p>
+        <input type="text" onChange={handleFindCheckList} />
+        <p>{currentCheckList?.name}</p>
       </Collapse>
     </ReadBarcodeContainer>
   )

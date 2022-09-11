@@ -1,7 +1,25 @@
+import { useContext, useEffect, useState } from 'react'
+import { CheckListContext } from '../../../../contexts/CheckListContext'
 import { ReadBarcode } from '../../../ReadBarcode'
 import { SerialNumbersGearboxesMotorsContainer } from './styles'
 
 export function SerialNumbersGearboxesMotors() {
+  const { currentCheckList } = useContext(CheckListContext)
+  const [numberBoxes, setNumberBoxes] = useState(0)
+  const [amountBoxes, setAmountBoxes] = useState<number[]>([])
+
+  useEffect(() => {
+    if (currentCheckList && currentCheckList.boxes !== numberBoxes) {
+      setNumberBoxes((state) => state + 1)
+      setAmountBoxes((state) => [...state, numberBoxes])
+    } else {
+      setAmountBoxes([])
+    }
+  }, [currentCheckList, numberBoxes, setNumberBoxes, setAmountBoxes])
+
+  console.log(currentCheckList)
+  console.log(amountBoxes)
+
   return (
     <SerialNumbersGearboxesMotorsContainer>
       <table>

@@ -9,16 +9,16 @@ interface item {
 interface CheckListData {
   id: string
   name: string
-  box: number
+  boxes: number
   QuantityPerBox: number
   itens: item[]
 }
 
-export const data: CheckListData[] = [
+export const checkListData: CheckListData[] = [
   {
     id: 'JB00016926',
     name: 'Acciona Nordex YD',
-    box: 3,
+    boxes: 3,
     QuantityPerBox: 3,
     itens: [
       {
@@ -58,7 +58,7 @@ export const data: CheckListData[] = [
   {
     id: '2T709T3191A01',
     name: 'Acciona Nordex PD',
-    box: 1,
+    boxes: 1,
     QuantityPerBox: 3,
     itens: [
       {
@@ -127,7 +127,7 @@ export const data: CheckListData[] = [
   {
     id: 'JB00004855 / JB00022273',
     name: 'VESTAS',
-    box: 2,
+    boxes: 2,
     QuantityPerBox: 4,
     itens: [
       {
@@ -185,7 +185,7 @@ export const data: CheckListData[] = [
   {
     id: 'JB00010399',
     name: 'WEG',
-    box: 1,
+    boxes: 1,
     QuantityPerBox: 3,
     itens: [
       {
