@@ -1,20 +1,9 @@
 import styled from 'styled-components'
 
 export const MainContainer = styled.main`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
+  max-width: 50rem;
 
-  padding: 1rem 0;
-  margin: 0 auto;
-
-  background-color: ${(props) => props.theme['gray-300']};
-
-  @media screen and (max-width: 768px) {
-    padding: 1rem 0.4rem 0 0.2rem;
-  }
+  margin: auto;
 
   h2 {
     font-size: 1.3rem;
@@ -26,21 +15,36 @@ export const MainContainer = styled.main`
       color: ${(props) => props.theme['blue-200']};
     }
   }
+`
 
-  .slider-wrapper {
-    width: 60rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+export const CardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  width: 100%;
+
+  box-shadow: 5px 5px 30px 20px ${(props) => props.theme['gray-500']};
+
+  border: 2px solid ${(props) => props.theme['gray-500']};
+  border-radius: 15px;
+
+  transition: all 300ms ease-in-out;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid ${(props) => props.theme['blue-700']};
   }
 
-  .slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
 
-    padding: 0.8rem 0;
-
-    background-color: transparent;
+    width: 100%;
   }
 `

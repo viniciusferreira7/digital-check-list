@@ -15,7 +15,7 @@ export const SerialNumbersGearboxesMotorsContainer = styled.div`
     flex-direction: column;
     gap: 2rem;
 
-    width: 26rem;
+    width: 23rem;
   }
 
   box-shadow: 5px 5px 30px 20px ${(props) => props.theme['gray-500']};

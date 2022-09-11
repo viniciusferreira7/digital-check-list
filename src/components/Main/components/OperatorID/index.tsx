@@ -1,13 +1,13 @@
 import { ReadBarcode } from '../../../ReadBarcode'
-import { OperatorIDContainer } from './styles'
+import { CardContainer } from '../../styles'
 
 export function OperatorID() {
   return (
-    <OperatorIDContainer>
+    <CardContainer>
       <h2>
         ID do Operador / <strong>Operator ID</strong>
       </h2>
       <ReadBarcode />
-    </OperatorIDContainer>
+    </CardContainer>
   )
 }

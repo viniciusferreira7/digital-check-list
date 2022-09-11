@@ -1,13 +1,13 @@
 import { ReadBarcode } from '../../../ReadBarcode'
-import { ProductionOrderContainer } from './styles'
+import { CardContainer } from '../../styles'
 
 export function ProductionOrder() {
   return (
-    <ProductionOrderContainer>
+    <CardContainer>
       <h2>
         Order de produção / <strong>Production order</strong>
       </h2>
       <ReadBarcode />
-    </ProductionOrderContainer>
+    </CardContainer>
   )
 }
