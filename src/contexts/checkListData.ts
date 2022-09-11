@@ -9,8 +9,8 @@ interface item {
 interface CheckListData {
   id: string
   name: string
-  boxes: number
-  QuantityPerBox: number
+  boxes: number[]
+  QuantityPerBox: number[]
   itens: item[]
 }
 
@@ -18,8 +18,8 @@ export const checkListData: CheckListData[] = [
   {
     id: 'JB00016926',
     name: 'Acciona Nordex YD',
-    boxes: 3,
-    QuantityPerBox: 3,
+    boxes: [1, 2, 3],
+    QuantityPerBox: [1, 2],
     itens: [
       {
         id: 1,
@@ -58,8 +58,8 @@ export const checkListData: CheckListData[] = [
   {
     id: '2T709T3191A01',
     name: 'Acciona Nordex PD',
-    boxes: 1,
-    QuantityPerBox: 3,
+    boxes: [1],
+    QuantityPerBox: [1, 2, 3],
     itens: [
       {
         id: 1,
@@ -127,8 +127,8 @@ export const checkListData: CheckListData[] = [
   {
     id: 'JB00004855 / JB00022273',
     name: 'VESTAS',
-    boxes: 2,
-    QuantityPerBox: 4,
+    boxes: [1, 2],
+    QuantityPerBox: [1, 2, 3, 4],
     itens: [
       {
         id: 1,
@@ -185,8 +185,8 @@ export const checkListData: CheckListData[] = [
   {
     id: 'JB00010399',
     name: 'WEG',
-    boxes: 1,
-    QuantityPerBox: 3,
+    boxes: [1],
+    QuantityPerBox: [1, 2, 3],
     itens: [
       {
         id: 1,

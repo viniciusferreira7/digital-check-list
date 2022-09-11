@@ -14,8 +14,8 @@ interface item {
 interface CheckListData {
   id: string
   name: string
-  boxes: number
-  QuantityPerBox: number
+  boxes: number[]
+  QuantityPerBox: number[]
   itens: item[]
 }
 interface CheckListContextType {

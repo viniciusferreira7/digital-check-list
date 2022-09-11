@@ -1,24 +1,10 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { CheckListContext } from '../../../../contexts/CheckListContext'
 import { ReadBarcode } from '../../../ReadBarcode'
 import { SerialNumbersGearboxesMotorsContainer } from './styles'
 
 export function SerialNumbersGearboxesMotors() {
   const { currentCheckList } = useContext(CheckListContext)
-  const [numberBoxes, setNumberBoxes] = useState(0)
-  const [amountBoxes, setAmountBoxes] = useState<number[]>([])
-
-  useEffect(() => {
-    if (currentCheckList && currentCheckList.boxes !== numberBoxes) {
-      setNumberBoxes((state) => state + 1)
-      setAmountBoxes((state) => [...state, numberBoxes])
-    } else {
-      setAmountBoxes([])
-    }
-  }, [currentCheckList, numberBoxes, setNumberBoxes, setAmountBoxes])
-
-  console.log(currentCheckList)
-  console.log(amountBoxes)
 
   return (
     <SerialNumbersGearboxesMotorsContainer>
@@ -41,12 +27,19 @@ export function SerialNumbersGearboxesMotors() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>JB00016926</td>
-            <td>1</td>
-            <td>xxxxx</td>
-            <td>xxxxx</td>
-          </tr>
+          {currentCheckList
+            ? currentCheckList.boxes.map((boxes) => (
+                <tr key={boxes}>
+                  <td>{currentCheckList ? currentCheckList.id : 'empty'}</td>
+                  <td>{boxes}</td>
+                  {currentCheckList.QuantityPerBox.map((item) => (
+                    <tr key={item}>
+                      <td>xxxxx</td>
+                    </tr>
+                  ))}
+                </tr>
+              ))
+            : null}
         </tbody>
       </table>
       <ReadBarcode />
