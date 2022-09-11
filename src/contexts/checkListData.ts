@@ -23,7 +23,8 @@ export const checkListData: CheckListData[] = [
     itens: [
       {
         id: 1,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Conferir a plaqueta de identificação.',
           eng: 'Check the nameplate',
@@ -31,7 +32,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 2,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Conferir a plaqueta de identificação.',
           eng: 'Check the nameplate',
@@ -39,7 +41,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 3,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Conferir a plaqueta de identificação.',
           eng: 'Check the nameplate',
@@ -47,7 +50,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 4,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Conferir a plaqueta de identificação.',
           eng: 'Check the nameplate',
@@ -63,7 +67,8 @@ export const checkListData: CheckListData[] = [
     itens: [
       {
         id: 1,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Defeitos de Pintura',
           eng: 'Painting defects',
@@ -71,7 +76,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 2,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Conferir a plaqueta de identificação.',
           eng: 'Check the nameplate',
@@ -79,7 +85,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 3,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br:
             'Superfícies não pintadas sem vestígios de tinta e protegidas com Tectyl 506EH. ATENÇÃO: A região entre o pinhão e o anel nilos deve estar corretamente pintada',
@@ -88,7 +95,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 4,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br:
             'Verificar a presença e a correta montagem do Dispositivo de travamento, a tampa do mesmo deve estar fechada e o anel trava alojado corretamente no canal',
@@ -97,7 +105,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 5,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br:
             'Verificar a presença da etiqueta de Óleo colada à esquerda da plaqueta do redutor ',
@@ -106,7 +115,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 6,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br:
             'Verificar a presença da graxa Kluber 46 MR no eixo de entrada',
@@ -115,7 +125,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 7,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br:
             'Verificar se os 3 redutores foram embalados com 1 saco de gel dessecante (det. A) dentro do saco VCI para cada redutor',
@@ -132,7 +143,8 @@ export const checkListData: CheckListData[] = [
     itens: [
       {
         id: 1,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Defeitos de Pintura',
           eng: 'Painting defects',
@@ -140,7 +152,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 2,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Conferir a plaqueta de identificação.',
           eng: 'Check the nameplate',
@@ -148,7 +161,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 3,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br:
             'Superfícies não pintadas sem vestígios de tinta e protegidas com Tectyl 506EH. ATENÇÃO: O anel espaçador entre o eixo pinhão e o anel nilos deve estar corretamente pintado (A) e a superfície inferior do mesmo protegida com Tectyl 506EH (B). SE A CARCAÇA FOR METALIZADA, NÃO APLICAR ÓLEO PROTETIVO NA REGIÃO METALIZADA',
@@ -157,7 +171,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 4,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Verificar se o alinhamento de montagem está conforme desenho',
           eng: 'Check if the alignment of the assembly is according to the drawing',
@@ -165,7 +180,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 5,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br:
             'Verificar a presença da graxa Kluber 46 MR no eixo de entrada',
@@ -174,7 +190,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 6,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Verificar se o alinhamento de montagem está conforme desenho',
           eng: 'Check if the alignment of the assembly is according to the drawing',
@@ -190,7 +207,8 @@ export const checkListData: CheckListData[] = [
     itens: [
       {
         id: 1,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Defeitos de Pintur',
           eng: 'Painting defects',
@@ -198,7 +216,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 2,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Conferir a plaqueta de identificação',
           eng: 'Check the nameplate',
@@ -206,7 +225,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 3,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Conferir a plaqueta de excentricidade',
           eng: 'Check the eccentric nameplate',
@@ -214,7 +234,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 4,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br: 'Verificar se o alinhamento de montagem está conforme desenho',
           eng: 'Check if the alignment of the assembly is according to the drawing ',
@@ -222,7 +243,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 5,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br:
             'Superfícies não pintadas sem vestígios de tinta e protegidas com TECTYL 506-EH',
@@ -231,7 +253,8 @@ export const checkListData: CheckListData[] = [
       },
       {
         id: 6,
-        photo: 'https://source.unsplash.com/500x500',
+        photo:
+          'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
           pt_br:
             'Verificar a presença da graxa Kluber 46 MR no eixo de entrada',

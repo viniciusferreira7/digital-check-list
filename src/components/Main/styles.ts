@@ -8,6 +8,7 @@ export const MainContainer = styled.main`
   gap: 2rem;
 
   padding: 1rem 0;
+  margin: 0 auto;
 
   background-color: ${(props) => props.theme['gray-300']};
 
@@ -24,5 +25,22 @@ export const MainContainer = styled.main`
       font-style: italic;
       color: ${(props) => props.theme['blue-200']};
     }
+  }
+
+  .slider-wrapper {
+    width: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.8rem 0;
+
+    background-color: transparent;
   }
 `

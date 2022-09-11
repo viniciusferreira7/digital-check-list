@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const CheckListContainer = styled.form`
   display: flex;
 
-  width: 50rem;
+  max-width: 50rem;
   padding-bottom: 0.2rem;
 
   @media screen and (max-width: 768px) {
@@ -76,6 +76,8 @@ export const CheckListContainer = styled.form`
     gap: 1.4rem;
 
     padding: 1rem;
+
+    min-width: 33.43rem;
   }
 `
 

@@ -9,7 +9,15 @@ import {
   SectionContainer,
 } from './styles'
 
-export function CheckList() {
+interface CheckListProps {
+  photo: string
+  control: {
+    pt_br: string
+    eng: string
+  }
+}
+
+export function CheckList({ photo, control }: CheckListProps) {
   const [checkedButton, setCheckedButton] = useState(false)
   const [checkedFile, setCheckedFile] = useState(false)
   const [nameFile, setNameFile] = useState('')
@@ -29,10 +37,7 @@ export function CheckList() {
   return (
     <CheckListContainer>
       <header>
-        <img
-          src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80"
-          alt="image de redutor"
-        />
+        <img src={photo} alt="image de redutor" />
       </header>
       <main>
         <SectionContainer>
@@ -41,15 +46,7 @@ export function CheckList() {
           </h4>
           <div>
             <p>
-              Conferir a plaqueta de identificação. Check the nameplate Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Ad similique
-              iste magni accusamus ducimus consequuntur ab nemo asperiores
-              tempore facilis nobis sit unde aut, delectus repellat quo eius
-              reiciendis? Aut! Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. Quos rerum explicabo blanditiis suscipit
-              expedita eligendi! Eaque expedita nihil quia reiciendis mollitia
-              quas accusantium consequuntur! Error inventore perspiciatis enim
-              quasi veniam.
+              {control.pt_br} / <strong>{control.eng}</strong>
             </p>
           </div>
         </SectionContainer>
