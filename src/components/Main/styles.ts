@@ -4,6 +4,13 @@ export const MainContainer = styled.main`
   max-width: 50rem;
 
   margin: auto;
+  margin-top: 2rem;
+
+  h1 {
+    padding-bottom: 1.5rem;
+    text-align: center;
+    color: ${(props) => props.theme['blue-200']};
+  }
 
   h2 {
     font-size: 1.3rem;
@@ -25,8 +32,6 @@ export const CardContainer = styled.div`
   gap: 1.5rem;
 
   width: 100%;
-
-  box-shadow: 5px 5px 30px 20px ${(props) => props.theme['gray-500']};
 
   border: 2px solid ${(props) => props.theme['gray-500']};
   border-radius: 15px;

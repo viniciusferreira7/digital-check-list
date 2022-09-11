@@ -13,8 +13,6 @@ export const CheckListContainer = styled.form`
     width: 26rem;
   }
 
-  box-shadow: 5px 5px 30px 20px ${(props) => props.theme['gray-500']};
-
   border: 2px solid ${(props) => props.theme['gray-500']};
   border-radius: 15px;
 
@@ -25,7 +23,6 @@ export const CheckListContainer = styled.form`
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.08);
     border: 2px solid ${(props) => props.theme['blue-700']};
 
     img {
@@ -36,7 +33,6 @@ export const CheckListContainer = styled.form`
   @media screen and (max-width: 768px) {
     &:hover {
       &:hover {
-        transform: scale(1);
         border: none;
 
         img {

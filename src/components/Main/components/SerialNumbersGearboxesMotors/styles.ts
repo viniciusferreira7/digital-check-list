@@ -18,8 +18,6 @@ export const SerialNumbersGearboxesMotorsContainer = styled.div`
     width: 23rem;
   }
 
-  box-shadow: 5px 5px 30px 20px ${(props) => props.theme['gray-500']};
-
   border: 2px solid ${(props) => props.theme['gray-500']};
   border-radius: 15px;
 
@@ -30,7 +28,6 @@ export const SerialNumbersGearboxesMotorsContainer = styled.div`
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.08);
     border: 2px solid ${(props) => props.theme['blue-700']};
   }
 

@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^2.3.2",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@ramonak/react-progress-bar": "^5.0.2",
     "commitizen": "^4.2.5",
     "framer-motion": "^7.3.2",
     "react": "^18.2.0",

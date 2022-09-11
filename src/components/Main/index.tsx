@@ -8,35 +8,52 @@ import { ProductionOrder } from './components/ProductionOrder'
 import { SerialNumbersGearboxesMotors } from './components/SerialNumbersGearboxesMotors'
 import { MainContainer } from './styles'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import ProgressBar from '@ramonak/react-progress-bar'
 
 export function Main() {
-  const { currentCheckList } = useContext(CheckListContext)
+  const { currentCheckList, indexSlide } = useContext(CheckListContext)
+
+  console.log(indexSlide)
   return (
     <MainContainer>
+      <h1>
+        {currentCheckList?.name} {currentCheckList?.id}
+        {currentCheckList ? (
+          <ProgressBar
+            completed={indexSlide}
+            maxCompleted={4}
+            bgColor={'#009EE0'}
+            baseBgColor={'transparent'}
+          />
+        ) : null}
+      </h1>
       <Carousel
         showThumbs={false}
         showArrows={false}
         showIndicators={false}
         showStatus={false}
-        selectedItem={0}
+        selectedItem={indexSlide}
         swipeable={false}
       >
         <ProductionOrder />
         <OperatorID />
         <SerialNumbersGearboxesMotors />
-        <div>
-          {currentCheckList ? (
-            currentCheckList.itens.map((item) => (
-              <CheckList
-                key={item.id}
-                photo={item.photo}
-                control={item.control}
-              />
-            ))
-          ) : (
-            <p>Teste</p>
-          )}
-        </div>
+        <Carousel
+          showThumbs={false}
+          showArrows={false}
+          showIndicators={false}
+          showStatus={false}
+          selectedItem={indexSlide}
+          swipeable={false}
+        >
+          {currentCheckList?.itens.map((item) => (
+            <CheckList
+              key={item.id}
+              photo={item.photo}
+              control={item.control}
+            />
+          ))}
+        </Carousel>
         <Finish />
       </Carousel>
     </MainContainer>

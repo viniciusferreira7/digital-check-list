@@ -12,6 +12,7 @@ interface CheckListData {
   boxes: number[]
   QuantityPerBox: number[]
   itens: item[]
+  quantityItems: number
 }
 
 export const checkListData: CheckListData[] = [
@@ -26,8 +27,8 @@ export const checkListData: CheckListData[] = [
         photo:
           'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
-          pt_br: 'Conferir a plaqueta de identificação.',
-          eng: 'Check the nameplate',
+          pt_br: 'Defeitos de Pintura',
+          eng: 'Painting defects',
         },
       },
       {
@@ -44,8 +45,9 @@ export const checkListData: CheckListData[] = [
         photo:
           'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
-          pt_br: 'Conferir a plaqueta de identificação.',
-          eng: 'Check the nameplate',
+          pt_br:
+            'Verificar a presença da etiqueta metálica "E" com a letra na cor preta, que indica o ponto máximo de Excenticidade e marcar a presença com marcador industrial (Produção cor Branco / Qualidade cor Azul)',
+          eng: 'Check the presence of "A" metallic plate with black letter color which indicate of the maximum eccentricity point and to mark the presence with industrial pen (Production white color / Quality blue color)',
         },
       },
       {
@@ -53,11 +55,13 @@ export const checkListData: CheckListData[] = [
         photo:
           'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80',
         control: {
-          pt_br: 'Conferir a plaqueta de identificação.',
-          eng: 'Check the nameplate',
+          pt_br:
+            'Verificar a presença das 2 etiquetas metálicas "E" com letra vermelha que indica o ponto isento de Excenticidade, eles devem estar posicionas à 90° positivo e negativo referente ao ponto máximo de excentricidade (A). Marcar a presença com marcador industrial (Produção cor Branco / Qualidade cor Azul)',
+          eng: 'Check the presence of "A" metallic plates with red letter color which indicate of the eccentricity free point. This plates must be placed to 90° positive and negative relation to the maximum eccentricity point (A). Mark the presence with industrial pen (Production white color / Quality blue color)',
         },
       },
     ],
+    quantityItems: 4,
   },
   {
     id: '2T709T3191A01',
@@ -134,6 +138,7 @@ export const checkListData: CheckListData[] = [
         },
       },
     ],
+    quantityItems: 7,
   },
   {
     id: 'JB00004855 / JB00022273',
@@ -198,6 +203,7 @@ export const checkListData: CheckListData[] = [
         },
       },
     ],
+    quantityItems: 6,
   },
   {
     id: 'JB00010399',
@@ -262,5 +268,6 @@ export const checkListData: CheckListData[] = [
         },
       },
     ],
+    quantityItems: 6,
   },
 ]
