@@ -29,7 +29,10 @@ export function CheckList() {
   return (
     <CheckListContainer>
       <header>
-        <img src="https://source.unsplash.com/500x500" alt="image de redutor" />
+        <img
+          src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=611&q=80"
+          alt="image de redutor"
+        />
       </header>
       <main>
         <SectionContainer>

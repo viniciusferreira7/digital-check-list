@@ -54,7 +54,11 @@ export const SerialNumbersGearboxesMotorsContainer = styled.div`
     th,
     td {
       border: 1px solid ${(props) => props.theme['blue-700']};
-      padding: 0.3rem;
+    }
+
+    p {
+      padding: 0.2rem;
+      border: 1px solid ${(props) => props.theme['blue-700']};
     }
   }
 `
