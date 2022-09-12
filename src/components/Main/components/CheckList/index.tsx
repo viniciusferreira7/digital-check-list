@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useState } from 'react'
+import { ChangeEvent, FormEvent, useState, useEffect, useContext } from 'react'
 import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im'
 import { AiFillCamera } from 'react-icons/ai'
 
@@ -8,6 +8,8 @@ import {
   InputContainer,
   SectionContainer,
 } from './styles'
+import { CheckListContext } from '../../../../contexts/CheckListContext'
+import ProgressBar from '@ramonak/react-progress-bar'
 
 interface CheckListProps {
   photo: string
@@ -18,6 +20,8 @@ interface CheckListProps {
 }
 
 export function CheckList({ photo, control }: CheckListProps) {
+  const { currentCheckList, indexItem } = useContext(CheckListContext)
+  const { nextSlideItem } = useContext(CheckListContext)
   const [checkedButton, setCheckedButton] = useState(false)
   const [checkedFile, setCheckedFile] = useState(false)
   const [nameFile, setNameFile] = useState('')
@@ -34,6 +38,16 @@ export function CheckList({ photo, control }: CheckListProps) {
     }
   }
 
+  useEffect(() => {
+    if (checkedButton) {
+      nextSlideItem()
+    }
+
+    return () => {
+      setCheckedButton(false)
+    }
+  }, [checkedButton, nextSlideItem])
+
   return (
     <CheckListContainer>
       <header>
@@ -42,6 +56,14 @@ export function CheckList({ photo, control }: CheckListProps) {
       <main>
         <SectionContainer>
           <h4>
+            {currentCheckList ? (
+              <ProgressBar
+                completed={indexItem}
+                maxCompleted={currentCheckList.quantityItems}
+                bgColor={'#00345C'}
+                baseBgColor={'transparent'}
+              />
+            ) : null}
             Controle/ <strong>Control</strong>
           </h4>
           <div>

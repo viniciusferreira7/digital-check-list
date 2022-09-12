@@ -10,7 +10,7 @@ export const CheckListContainer = styled.form`
     flex-direction: column;
     gap: 2rem;
 
-    width: 26rem;
+    width: 23rem;
   }
 
   border: 2px solid ${(props) => props.theme['gray-500']};
@@ -43,7 +43,7 @@ export const CheckListContainer = styled.form`
   }
 
   header {
-    width: 150rem;
+    width: 20rem;
     min-height: 16rem;
 
     border-top-left-radius: 12px;
@@ -73,7 +73,8 @@ export const CheckListContainer = styled.form`
 
     padding: 1rem;
 
-    min-width: 33.43rem;
+    width: 33.43rem;
+    max-width: 23rem;
   }
 `
 

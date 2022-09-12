@@ -52,4 +52,8 @@ export const CardContainer = styled.div`
 
     width: 100%;
   }
+
+  h2 {
+    padding-top: 0.8rem;
+  }
 `

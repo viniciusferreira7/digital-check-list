@@ -22,7 +22,6 @@ export function ReadBarcode() {
 
       <Collapse in={isOpen} animateOpacity>
         <input type="text" onChange={handleFindCheckList} />
-        <p>{currentCheckList?.name}</p>
       </Collapse>
     </ReadBarcodeContainer>
   )

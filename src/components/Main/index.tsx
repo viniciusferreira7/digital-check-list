@@ -11,17 +11,17 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loa
 import ProgressBar from '@ramonak/react-progress-bar'
 
 export function Main() {
-  const { currentCheckList, indexSlide } = useContext(CheckListContext)
+  const { currentCheckList, indexSlide, indexItem } =
+    useContext(CheckListContext)
 
-  console.log(indexSlide)
   return (
     <MainContainer>
       <h1>
         {currentCheckList?.name} {currentCheckList?.id}
         {currentCheckList ? (
           <ProgressBar
-            completed={indexSlide}
-            maxCompleted={4}
+            completed={(indexSlide / 4) * 100}
+            maxCompleted={100}
             bgColor={'#009EE0'}
             baseBgColor={'transparent'}
           />
@@ -43,7 +43,7 @@ export function Main() {
           showArrows={false}
           showIndicators={false}
           showStatus={false}
-          selectedItem={indexSlide}
+          selectedItem={indexItem}
           swipeable={false}
         >
           {currentCheckList?.itens.map((item) => (

@@ -29,9 +29,15 @@ export const ReadBarcodeContainer = styled.div`
 
     transition: all 300ms ease-in-out;
   }
+
+  input {
+    width: 15rem;
+    height: 2rem;
+    padding: 0.5rem;
+  }
 `
 export const CameraContainer = styled.div`
-  background-color: ${(props) => props.theme['blue-200']};
+  background-color: ${(props) => props.theme['blue-700']};
 
   width: 30.5rem;
   max-width: 35rem;
