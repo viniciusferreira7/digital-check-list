@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useDisclosure, Collapse } from '@chakra-ui/react'
-import { Html5QrcodeScanner } from 'html5-qrcode'
+import { Html5Qrcode } from 'html5-qrcode'
 
 import {
   ButtonContainer,
@@ -12,6 +12,7 @@ import { Html5QrcodeError, Html5QrcodeResult } from 'html5-qrcode/esm/core'
 export function ReadBarcode() {
   const { isOpen, onToggle } = useDisclosure()
   const [result, setReuslt] = useState('reader')
+  const [buttonAction, setButtonAction] = useState('')
   const [closeCollapse, setCloseCollapse] = useState(isOpen)
 
   function onScanSuccess(
@@ -37,21 +38,28 @@ export function ReadBarcode() {
   }, [closeCollapse, setCloseCollapse, isOpen])
 
   useEffect(() => {
-    const html5QrcodeScanner = new Html5QrcodeScanner(
-      'reader',
-      {
-        fps: 10,
-        qrbox: { width: 50, height: 250 },
-        supportedScanTypes: [0],
-      },
-      /* verbose= */ false,
-    )
-    html5QrcodeScanner.render(onScanSuccess, onScanFailure)
-  })
+    const html5QrCode = new Html5Qrcode('reader')
+    if (buttonAction === 'start') {
+      html5QrCode.start(
+        { facingMode: 'environment' },
+        { fps: 60 },
+        onScanSuccess,
+        onScanFailure,
+      )
+    }
+    if (result !== 'reader') {
+      html5QrCode.clear()
+      html5QrCode.stop()
+    }
+  }, [buttonAction, result])
 
-  function handleStartCamera() {}
+  function handleStartCamera() {
+    setButtonAction('start')
+  }
 
-  function handleStopCamera() {}
+  function handleStopCamera() {
+    setButtonAction('stop')
+  }
 
   return (
     <ReadBarcodeContainer>
