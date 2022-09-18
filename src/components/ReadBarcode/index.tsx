@@ -41,7 +41,7 @@ export function ReadBarcode() {
     if (buttonAction === 'start') {
       html5QrCode.start(
         { facingMode: 'environment' },
-        { fps: 10, qrbox: { width: 250, height: 250 } },
+        { fps: 10, qrbox: { width: 488, height: 376 } },
         onScanSuccess,
         onScanFailure,
       )
