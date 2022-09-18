@@ -2,11 +2,7 @@ import { useState, useEffect } from 'react'
 import { useDisclosure, Collapse } from '@chakra-ui/react'
 import { Html5QrcodeScanner } from 'html5-qrcode'
 
-import {
-  ButtonContainer,
-  CameraContainer,
-  ReadBarcodeContainer,
-} from './styles'
+import { ButtonContainer, ReadBarcodeContainer } from './styles'
 import { Html5QrcodeError, Html5QrcodeResult } from 'html5-qrcode/esm/core'
 
 export function ReadBarcode() {
