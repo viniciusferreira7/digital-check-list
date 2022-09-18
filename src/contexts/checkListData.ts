@@ -13,6 +13,7 @@ interface CheckListData {
   QuantityPerBox: number[]
   itens: item[]
   quantityItems: number
+  hasEngines: boolean
 }
 
 export const checkListData: CheckListData[] = [
@@ -62,6 +63,7 @@ export const checkListData: CheckListData[] = [
       },
     ],
     quantityItems: 4,
+    hasEngines: true,
   },
   {
     id: '2T709T3191A01',
@@ -139,6 +141,7 @@ export const checkListData: CheckListData[] = [
       },
     ],
     quantityItems: 7,
+    hasEngines: false,
   },
   {
     id: 'JB00004855 / JB00022273',
@@ -204,6 +207,7 @@ export const checkListData: CheckListData[] = [
       },
     ],
     quantityItems: 6,
+    hasEngines: true,
   },
   {
     id: 'JB00010399',
@@ -269,5 +273,6 @@ export const checkListData: CheckListData[] = [
       },
     ],
     quantityItems: 6,
+    hasEngines: false,
   },
 ]

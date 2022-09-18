@@ -4,14 +4,14 @@ import { AiFillCamera } from 'react-icons/ai'
 
 import {
   ArticleContainer,
-  CheckListContainer,
+  CheckItemsContainer,
   InputContainer,
   SectionContainer,
 } from './styles'
-import { CheckListContext } from '../../../../contexts/CheckListContext'
 import ProgressBar from '@ramonak/react-progress-bar'
+import { CheckListContext } from '../../../../contexts/CheckListContext'
 
-interface CheckListProps {
+interface CheckItemsProps {
   photo: string
   control: {
     pt_br: string
@@ -19,9 +19,9 @@ interface CheckListProps {
   }
 }
 
-export function CheckList({ photo, control }: CheckListProps) {
-  const { currentCheckList, indexItem } = useContext(CheckListContext)
-  const { nextSlideItem } = useContext(CheckListContext)
+export function CheckItems({ photo, control }: CheckItemsProps) {
+  const { currentCheckItems, indexItem, nextSlideItem } =
+    useContext(CheckListContext)
   const [checkedButton, setCheckedButton] = useState(false)
   const [checkedFile, setCheckedFile] = useState(false)
   const [nameFile, setNameFile] = useState('')
@@ -49,17 +49,17 @@ export function CheckList({ photo, control }: CheckListProps) {
   }, [checkedButton, nextSlideItem])
 
   return (
-    <CheckListContainer>
+    <CheckItemsContainer>
       <header>
         <img src={photo} alt="image de redutor" />
       </header>
       <main>
         <SectionContainer>
           <h4>
-            {currentCheckList ? (
+            {currentCheckItems ? (
               <ProgressBar
                 completed={indexItem}
-                maxCompleted={currentCheckList.quantityItems}
+                maxCompleted={currentCheckItems.quantityItems}
                 bgColor={'#00345C'}
                 baseBgColor={'transparent'}
               />
@@ -116,6 +116,6 @@ export function CheckList({ photo, control }: CheckListProps) {
           </InputContainer>
         </SectionContainer>
       </main>
-    </CheckListContainer>
+    </CheckItemsContainer>
   )
 }

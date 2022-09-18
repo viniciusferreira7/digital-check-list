@@ -28,7 +28,7 @@ interface CheckListData {
 interface CheckListContextType {
   currentCheckList: CheckListData | undefined
   indexSlide: number
-  indexItem: number
+  indexCheckItem: number
   handleFindCheckList: (event: ChangeEvent<HTMLInputElement>) => void
   nextSlideItem: () => void
 }
@@ -41,7 +41,7 @@ export const CheckListContext = createContext({} as CheckListContextType)
 
 export function CheckListProvider({ children }: CheckListProviderProps) {
   const [indexSlide, setIndexSlide] = useState(0)
-  const [indexItem, setIndexItem] = useState(0)
+  const [indexCheckItem, setIndexCheckItem] = useState(0)
   const [currentCheckList, setCurrentCheckList] = useState<CheckListData>()
 
   function handleFindCheckList(event: ChangeEvent<HTMLInputElement>) {
@@ -51,13 +51,13 @@ export function CheckListProvider({ children }: CheckListProviderProps) {
   }
 
   function nextSlideItem() {
-    if (currentCheckList && indexItem < currentCheckList.quantityItems) {
-      setIndexItem((state) => state + 1)
+    if (currentCheckList && indexCheckItem < currentCheckList.quantityItems) {
+      setIndexCheckItem((state) => state + 1)
     } else if (
       currentCheckList &&
-      indexItem === currentCheckList.quantityItems
+      indexCheckItem === currentCheckList.quantityItems
     ) {
-      setIndexItem(0)
+      setIndexCheckItem(0)
       setIndexSlide((state) => state + 1)
     }
   }
@@ -76,7 +76,7 @@ export function CheckListProvider({ children }: CheckListProviderProps) {
       value={{
         currentCheckList,
         indexSlide,
-        indexItem,
+        indexCheckItem,
         handleFindCheckList,
         nextSlideItem,
       }}

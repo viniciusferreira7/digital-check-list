@@ -1,4 +1,4 @@
-import { ReadBarcode } from '../../../ReadBarcode'
+import { ReadBarcode } from '../../../../components/ReadBarcode'
 import { CardContainer } from '../../styles'
 
 export function ProductionOrder() {

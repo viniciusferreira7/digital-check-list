@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import { CheckListContext } from '../../../../contexts/CheckListContext'
-import { ReadBarcode } from '../../../ReadBarcode'
-import { CheckList } from '../CheckList'
+import { ReadBarcode } from '../../../../components/ReadBarcode'
+import { CheckList } from '../CheckItems'
 import { SerialNumbersGearboxesMotorsContainer } from './styles'
 
 export function SerialNumbersGearboxesMotors() {

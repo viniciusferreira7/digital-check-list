@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const CheckListContainer = styled.form`
+export const CheckItemsContainer = styled.form`
   display: flex;
 
   max-width: 50rem;
