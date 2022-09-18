@@ -20,7 +20,7 @@ interface CheckItemsProps {
 }
 
 export function CheckItems({ photo, control }: CheckItemsProps) {
-  const { currentCheckItems, indexItem, nextSlideItem } =
+  const { currentCheckList, indexCheckItem, nextSlideItem } =
     useContext(CheckListContext)
   const [checkedButton, setCheckedButton] = useState(false)
   const [checkedFile, setCheckedFile] = useState(false)
@@ -56,10 +56,10 @@ export function CheckItems({ photo, control }: CheckItemsProps) {
       <main>
         <SectionContainer>
           <h4>
-            {currentCheckItems ? (
+            {currentCheckList ? (
               <ProgressBar
-                completed={indexItem}
-                maxCompleted={currentCheckItems.quantityItems}
+                completed={indexCheckItem}
+                maxCompleted={currentCheckList.quantityItems}
                 bgColor={'#00345C'}
                 baseBgColor={'transparent'}
               />

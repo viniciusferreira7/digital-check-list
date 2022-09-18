@@ -11,7 +11,7 @@ import { Html5QrcodeError, Html5QrcodeResult } from 'html5-qrcode/esm/core'
 
 export function ReadBarcode() {
   const { isOpen, onToggle } = useDisclosure()
-  const [result, setReuslt] = useState('')
+  const [result, setReuslt] = useState('dd')
   const [closeCollapse, setCloseCollapse] = useState(isOpen)
 
   function onScanSuccess(
@@ -37,7 +37,7 @@ export function ReadBarcode() {
     )
 
     html5BarcodeScanner.render(onScanSuccess, onScanFailure)
-  }, [])
+  })
 
   useEffect(() => {
     if (isOpen) setCloseCollapse(true)

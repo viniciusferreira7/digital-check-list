@@ -4,7 +4,7 @@ import { CheckListContext } from '../../../../contexts/CheckListContext'
 import { SerialNumbersGearboxesMotorsContainer } from './styles'
 
 export function SerialNumbersGearboxesMotors() {
-  const { currentCheckList, indexItem } = useContext(CheckListContext)
+  const { currentCheckList } = useContext(CheckListContext)
 
   return (
     <SerialNumbersGearboxesMotorsContainer>
