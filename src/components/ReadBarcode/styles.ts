@@ -39,8 +39,9 @@ export const ReadBarcodeContainer = styled.div`
 export const CameraContainer = styled.div`
   background-color: ${(props) => props.theme['blue-700']};
 
+  width: 30.5rem;
   max-width: 35rem;
-  max-height: 23.5rem;
+  height: 23.5rem;
 `
 
 export const ButtonContainer = styled.button`
