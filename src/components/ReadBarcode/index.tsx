@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useDisclosure, Collapse } from '@chakra-ui/react'
-import { Html5QrcodeScanner } from 'html5-qrcode'
+import { Html5Qrcode } from 'html5-qrcode'
 
 import {
   ButtonContainer,
@@ -11,7 +11,8 @@ import { Html5QrcodeError, Html5QrcodeResult } from 'html5-qrcode/esm/core'
 
 export function ReadBarcode() {
   const { isOpen, onToggle } = useDisclosure()
-  const [result, setReuslt] = useState('dd')
+  const [result, setReuslt] = useState('reader')
+  const [buttonAction, setButtonAction] = useState('')
   const [closeCollapse, setCloseCollapse] = useState(isOpen)
 
   function onScanSuccess(
@@ -19,25 +20,12 @@ export function ReadBarcode() {
     decodedResult: Html5QrcodeResult,
   ) {
     setReuslt(decodedText)
-    // handle the scanned code as you like, for example:
     console.log(`Code matched = ${decodedText}`, decodedResult)
   }
 
   function onScanFailure(errorMessage: string, error: Html5QrcodeError) {
-    // handle scan failure, usually better to ignore and keep scanning.
-    // for example:
     console.warn(`Code scan error = ${error}`)
   }
-
-  useEffect(() => {
-    const html5BarcodeScanner = new Html5QrcodeScanner(
-      'reader',
-      { fps: 10, qrbox: { width: 250, height: 250 }, supportedScanTypes: [0] },
-      false,
-    )
-
-    html5BarcodeScanner.render(onScanSuccess, onScanFailure)
-  })
 
   useEffect(() => {
     if (isOpen) setCloseCollapse(true)
@@ -48,13 +36,35 @@ export function ReadBarcode() {
     }
   }, [closeCollapse, setCloseCollapse, isOpen])
 
+  useEffect(() => {
+    const html5QrCode = new Html5Qrcode('reader')
+    if (buttonAction === 'start') {
+      html5QrCode.start(
+        { facingMode: 'environment' },
+        { fps: 10, qrbox: { width: 250, height: 250 } },
+        onScanSuccess,
+        onScanFailure,
+      )
+    }
+  }, [buttonAction])
+
+  function handleStartCamera() {
+    setButtonAction('start')
+  }
+
+  function handleStopCamera() {
+    setButtonAction('stop')
+  }
+
   return (
     <ReadBarcodeContainer>
       <ButtonContainer onClick={onToggle}>SCAN</ButtonContainer>
       <Collapse in={closeCollapse} animateOpacity>
-        <CameraContainer id="reader"></CameraContainer>
+        <CameraContainer id="reader" />
       </Collapse>
       {result}
+      <button onClick={handleStartCamera}>Start</button>
+      <button onClick={handleStopCamera}>Stop</button>
       <Collapse in={closeCollapse} animateOpacity></Collapse>
     </ReadBarcodeContainer>
   )
