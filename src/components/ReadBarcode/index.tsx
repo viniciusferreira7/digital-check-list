@@ -41,7 +41,7 @@ export function ReadBarcode() {
         supportedScanTypes: [0],
         formatsToSupport: [3, 4, 5],
       },
-      false,
+      true,
     )
     html5QrcodeScanner.render(onScanSuccess, onScanFailure)
   }, [])
