@@ -39,6 +39,7 @@ export function ReadBarcode() {
         fps: 10,
         qrbox: { width: 250, height: 250 },
         supportedScanTypes: [0],
+        formatsToSupport: [3, 4, 5],
       },
       false,
     )
